@@ -2,117 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People First App</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      overflow-x: hidden;
-      color: white;
+    * {
+      box-sizing: border-box;
     }
-    video.bg-video {
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    /* Video Background */
+    #video-bg {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
       z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     header {
       text-align: center;
-      padding: 40px 20px 20px;
-      background-color: rgba(0,0,0,0.5);
+      padding: 60px 20px 20px 20px;
+      background: rgba(0,0,0,0.6);
     }
     header h1 {
       font-size: 2.5em;
       color: #fff;
-      text-shadow: 0 0 10px #00f, 0 0 30px #9400ff;
+      text-shadow: 0 0 10px #00f, 0 0 20px #9000ff;
     }
     header p {
       font-style: italic;
+      font-size: 1.1em;
       color: #ccc;
-      margin-top: 10px;
     }
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       padding: 30px;
-      max-width: 1000px;
+      max-width: 600px;
       margin: auto;
     }
     .button {
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid #8000ff;
-      border-radius: 16px;
+      background: rgba(18, 0, 38, 0.85);
+      border: none;
+      border-radius: 14px;
       padding: 18px;
-      font-size: 1em;
-      color: #fff;
+      font-size: 1.1em;
+      color: white;
       cursor: pointer;
       text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 15px #8800ff;
-      text-decoration: none;
+      box-shadow: 0 0 15px #9000ff;
+      transition: transform 0.2s ease;
     }
     .button:hover {
       transform: scale(1.05);
-      background: rgba(60, 0, 100, 0.8);
+      background-color: rgba(36, 0, 70, 0.9);
     }
-    section {
-      scroll-margin-top: 100px;
+    section[id] {
       padding: 40px 20px;
-      background-color: rgba(0,0,0,0.6);
-      margin: 40px 0;
-      border-radius: 10px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      margin-bottom: 40px;
     }
     section h2 {
-      margin-bottom: 10px;
       color: #00eaff;
-      text-shadow: 0 0 5px #9400ff;
     }
     footer {
       text-align: center;
       padding: 20px;
       color: #aaa;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0,0,0,0.7);
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔁 City Video Background -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="https://cdn.pixabay.com/vimeo/491916429/City%20Lights%20(720p).mp4?width=1280&hash=994f1111dd5d58d22fc4482e52ac9e7d0a77dcab" type="video/mp4">
-    Your browser does not support the video tag.
+  <!-- VIDEO BACKGROUND -->
+  <video id="video-bg" autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2023/03/29/157566-815948720_large.mp4" type="video/mp4">
+    <!-- Add more scenes in future by switching videos -->
   </video>
 
-  <!-- 🔹 App Title -->
   <header>
     <h1>People First App</h1>
     <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
   </header>
 
-  <!-- 🔘 Navigation Buttons -->
   <div class="grid">
-    <a href="#justice" class="button">Justice Support</a>
-    <a href="#jobs" class="button">Jobs</a>
-    <a href="#food" class="button">Food & Aid</a>
-    <a href="#health" class="button">Health & Fitness</a>
-    <a href="#housing" class="button">Shelter & Housing</a>
-    <a href="#education" class="button">Education & Skills</a>
-    <a href="#ai" class="button">AI Assistant</a>
-    <a href="#grants" class="button">Grants</a>
-    <a href="#finance" class="button">Finance Tools</a>
-    <a href="#music" class="button">Soothing Music</a>
+    <a class="button" href="#justice">Justice Support</a>
+    <a class="button" href="#jobs">Jobs</a>
+    <a class="button" href="#food">Food & Aid</a>
+    <a class="button" href="#health">Health & Fitness</a>
+    <a class="button" href="#shelter">Shelter & Housing</a>
+    <a class="button" href="#education">Education & Skills</a>
+    <a class="button" href="#ai">AI Assistant</a>
   </div>
 
-  <!-- 🔽 Section Content -->
+  <!-- Sections -->
   <section id="justice">
     <h2>Justice Support</h2>
     <p>Find expungement help, civil rights legal aid, and resources for those impacted by the justice system.</p>
@@ -120,50 +115,34 @@
 
   <section id="jobs">
     <h2>Jobs</h2>
-    <p>Explore job boards, gig apps, freelance tools, and remote work resources near you.</p>
+    <p>Explore job boards, gig apps, freelance tools, and remote work opportunities near you.</p>
   </section>
 
   <section id="food">
     <h2>Food & Aid</h2>
-    <p>Get food assistance, meal coupons, EBT locations, and connect with local aid organizations.</p>
+    <p>Get food assistance, meal coupons, EBT locations, and connect with local aid programs.</p>
   </section>
 
   <section id="health">
     <h2>Health & Fitness</h2>
-    <p>Workout videos, therapy platforms, local clinics, mental health support, and more.</p>
+    <p>Access workout videos, therapy platforms, clinics, mental health support, and more.</p>
   </section>
 
-  <section id="housing">
+  <section id="shelter">
     <h2>Shelter & Housing</h2>
-    <p>Find homeless shelters, apply for housing assistance, or start the process of buying a car or home.</p>
+    <p>Find emergency housing, rent assistance, low-income homes, and shelter connections.</p>
   </section>
 
   <section id="education">
     <h2>Education & Skills</h2>
-    <p>Free courses, certifications, online schools, job training, and GED programs.</p>
+    <p>Learn new skills through free courses, trade training, GED programs, and more.</p>
   </section>
 
   <section id="ai">
     <h2>AI Assistant</h2>
-    <p>Talk to our built-in AI for help finding resources, asking questions, and creating custom solutions.</p>
+    <p>Talk to our built-in AI assistant to get help with any life problem or resource — available 24/7.</p>
   </section>
 
-  <section id="grants">
-    <h2>Grants</h2>
-    <p>Access to small business grants, emergency grants, educational funding, and government resources.</p>
-  </section>
-
-  <section id="finance">
-    <h2>Finance Tools</h2>
-    <p>Invest in stocks, pay bills, save money with Acorns-like tools, trade Forex, use CashApp-like platforms, and discover credit repair programs.</p>
-  </section>
-
-  <section id="music">
-    <h2>Soothing Music</h2>
-    <p>Tap into Spotify, iTunes, Pandora, and ambient healing music to help with stress and focus.</p>
-  </section>
-
-  <!-- 🔚 Footer -->
   <footer>
     © 2025 People First App. All rights reserved.
   </footer>
