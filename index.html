@@ -1,89 +1,86 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>People First App – United Citizens</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People First App</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at top, #0e002d, #000);
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0a0024, #280046);
+      color: #ffffff;
       overflow-x: hidden;
     }
     header {
-      background: #1a003b;
-      padding: 2rem 1rem;
       text-align: center;
-      border-bottom: 2px solid #7000ff;
-      box-shadow: 0 4px 20px #7000ff88;
-    }
-    h1 {
-      font-size: 2rem;
+      padding: 50px 20px 20px 20px;
+      background: radial-gradient(circle, #45008a 0%, #000010 100%);
       color: #fff;
+      animation: glow 4s ease-in-out infinite alternate;
     }
-    .tagline {
-      font-size: 0.95rem;
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
       font-style: italic;
-      color: #9e78ff;
+      font-size: 1.1em;
+      color: #ccc;
     }
-    .dashboard {
-      padding: 2rem 1rem;
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f, 0 0 20px #9000ff; }
+      to { text-shadow: 0 0 20px #00eaff, 0 0 40px #a200ff; }
+    }
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 30px;
       max-width: 1000px;
       margin: auto;
     }
-    .module {
-      background: #190045;
-      border: 1px solid #4e00b3;
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
+    .button {
+      background: linear-gradient(145deg, #3a0068, #180040);
+      border: none;
+      border-radius: 14px;
+      padding: 20px;
+      font-size: 1em;
+      color: #fff;
       cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 0 10px #7000ff44;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
-    .module:hover {
-      background: #26006d;
-      box-shadow: 0 0 15px #a369ff;
-    }
-    .module-title {
-      margin-top: 10px;
-      font-weight: bold;
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #8800ff;
     }
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
-      color: #ccc;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>People First App</h1>
-    <p class="tagline">Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
-  </header>  <div class="dashboard">
-    <div class="module"><div class="module-title">Jobs</div></div>
-    <div class="module"><div class="module-title">Food & Aid</div></div>
-    <div class="module"><div class="module-title">Health & Fitness</div></div>
-    <div class="module"><div class="module-title">Shelter & Housing</div></div>
-    <div class="module"><div class="module-title">Education & Skills</div></div>
-    <div class="module"><div class="module-title">AI Assistant</div></div>
-    <div class="module"><div class="module-title">Grants</div></div>
-    <div class="module"><div class="module-title">Justice Support</div></div>
-    <div class="module"><div class="module-title">Buy a Car</div></div>
-    <div class="module"><div class="module-title">Buy a Home</div></div>
-    <div class="module"><div class="module-title">National Wallet</div></div>
-    <div class="module"><div class="module-title">Vote + Policy</div></div>
-    <div class="module"><div class="module-title">Creator Royalties</div></div>
-    <div class="module"><div class="module-title">Emergency Services</div></div>
-    <div class="module"><div class="module-title">Upload Ideas/Content</div></div>
-  </div>  <footer>
-    United People First App • All rights reserved • Powered by AI & Community
+    <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
+  </header>
+  <section class="grid">
+    <button class="button">Jobs</button>
+    <button class="button">Food & Aid</button>
+    <button class="button">Health & Fitness</button>
+    <button class="button">Shelter & Housing</button>
+    <button class="button">Education & Skills</button>
+    <button class="button">AI Assistant</button>
+    <button class="button">Grants</button>
+    <button class="button">Justice Support</button>
+    <button class="button">Buy a Car</button>
+    <button class="button">Buy a Home</button>
+  </section>
+  <footer>
+    © 2025 People First App. All rights reserved.
   </footer>
 </body>
 </html>
