@@ -5,33 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>People First App</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: linear-gradient(180deg, #090017, #1a0033);
+      background: #000;
       color: white;
-      text-align: center;
       scroll-behavior: smooth;
+      position: relative;
+      z-index: 1;
     }
 
-    h1 {
+    /* 🔄 Background video */
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 0, 30, 0.7);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    header h1 {
       font-size: 2.5em;
       color: #00f6ff;
       text-shadow: 0 0 15px #00f6ff;
-      margin-top: 40px;
+      margin: 0;
     }
 
-    p {
+    header p {
       font-style: italic;
       color: #ccc;
-      margin: 10px 0 30px;
+      margin-top: 10px;
     }
 
     .menu {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 20px 30px;
+      padding: 20px;
     }
 
     .menu button {
@@ -46,7 +76,7 @@
       max-width: 350px;
       box-shadow: 0 0 15px #8f00ff;
       cursor: pointer;
-      transition: 0.2s;
+      transition: 0.2s ease;
     }
 
     .menu button:hover {
@@ -61,17 +91,27 @@
 
     section p {
       font-size: 1.1em;
-      line-height: 1.6;
       color: #ccc;
-      margin-top: 0;
+      margin: 0 auto;
+      max-width: 600px;
     }
   </style>
 </head>
 <body>
 
-  <h1>People First App</h1>
-  <p>One-stop life support system — built for the people, by the people.</p>
+  <!-- 🔄 Background Video -->
+  <video autoplay muted loop class="bg-video">
+    <source src="bg.mp4" type="video/mp4" />
+  </video>
+  <div class="overlay"></div>
 
+  <!-- Header -->
+  <header>
+    <h1>People First App</h1>
+    <p>One-stop system for jobs, aid, health, housing & more.</p>
+  </header>
+
+  <!-- Buttons -->
   <div class="menu">
     <button onclick="scrollToSection('jobs')">Jobs</button>
     <button onclick="scrollToSection('food')">Food & Aid</button>
@@ -82,32 +122,33 @@
     <button onclick="scrollToSection('economic')">Economic Power</button>
   </div>
 
+  <!-- Sections -->
   <section id="jobs">
-    <p>Explore real-time job boards, government employment programs, and freelance work. Tools for resumes, interview prep, and gig economy links will live here.</p>
+    <p>Search for gigs, full-time jobs, or remote work that fits your lifestyle.</p>
   </section>
 
   <section id="food">
-    <p>Connect to food banks, SNAP benefits, and free meal programs. This section helps locate real-time food access services nearby.</p>
+    <p>Find nearby food banks, free meals, EBT info, and emergency supplies.</p>
   </section>
 
   <section id="health">
-    <p>Support for mental health, fitness plans, self-care routines, and access to free/affordable care options — coming soon.</p>
+    <p>Access mental health support, home workouts, self-care, and clinics.</p>
   </section>
 
   <section id="shelter">
-    <p>Get immediate help with emergency shelters, housing programs, rent assistance, and housing rights education.</p>
+    <p>Connect to emergency shelters, housing programs, or rent assistance.</p>
   </section>
 
   <section id="education">
-    <p>From GED programs to scholarships, job training to online universities — this hub connects you to real learning opportunities.</p>
+    <p>Get certified, earn your GED, or take free online classes and trade skills.</p>
   </section>
 
   <section id="ai">
-    <p>This will be your smart assistant for fast answers, help finding resources, and asking about laws, benefits, or emergencies.</p>
+    <p>Ask anything — your AI assistant will guide you to tools and answers fast.</p>
   </section>
 
   <section id="economic">
-    <p>Track how your contributions to society (voting, labor, service) create income. This is the core of the People First wealth-sharing model.</p>
+    <p>Learn how national equity, voting, and digital contributions create income.</p>
   </section>
 
   <script>
