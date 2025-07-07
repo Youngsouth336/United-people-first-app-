@@ -1,83 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People First App</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://i.ibb.co/Wn8mx1G/city-bg.gif') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(to bottom right, #0a0024, #280046);
       color: #ffffff;
       overflow-x: hidden;
     }
-
     header {
       text-align: center;
       padding: 50px 20px 20px 20px;
-      background: rgba(0, 0, 0, 0.6);
+      background: radial-gradient(circle, #45008a 0%, #000010 100%);
       color: #fff;
       animation: glow 4s ease-in-out infinite alternate;
     }
-
     header h1 {
-      font-size: 2.8em;
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
-
     header p {
       font-style: italic;
       font-size: 1.1em;
       color: #ccc;
     }
-
     @keyframes glow {
       from { text-shadow: 0 0 10px #00f, 0 0 20px #9000ff; }
       to { text-shadow: 0 0 20px #00eaff, 0 0 40px #a200ff; }
     }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 20px;
       padding: 30px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
     }
-
     .button {
-      background: rgba(58, 0, 104, 0.8);
+      background: linear-gradient(145deg, #3a0068, #180040);
       border: none;
       border-radius: 14px;
       padding: 20px;
       font-size: 1em;
-      font-weight: bold;
       color: #fff;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(3px);
     }
-
     .button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px #a400ff;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #8800ff;
     }
-
     footer {
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #ddd;
-      background: rgba(0, 0, 0, 0.6);
-      margin-top: 30px;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+      color: #aaa;
     }
   </style>
 </head>
@@ -86,142 +67,18 @@
     <h1>People First App</h1>
     <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
   </header>
-
   <section class="grid">
-    <a href="https://justice.gov" target="_blank"><button class="button">Justice Support</button></a>
-    <a href="https://indeed.com" target="_blank"><button class="button">Jobs</button></a>
-    <a href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank"><button class="button">Food & Aid</button></a>
-    <a href="https://www.healthline.com/fitness" target="_blank"><button class="button">Health & Fitness</button></a>
-    <a href="https://www.hud.gov/findshelter" target="_blank"><button class="button">Shelter & Housing</button></a>
-    <a href="https://www.coursera.org/" target="_blank"><button class="button">Education & Skills</button></a>
-    <a href="https://chat.openai.com/" target="_blank"><button class="button">AI Assistant</button></a>
-    <a href="https://www.grants.gov/" target="_blank"><button class="button">Grants</button></a>
-    <a href="https://www.autotrader.com/" target="_blank"><button class="button">Buy a Car</button></a>
-    <a href="https://www.zillow.com/" target="_blank"><button class="button">Buy a Home</button></a>
-    <a href="https://robinhood.com/" target="_blank"><button class="button">Buy Stocks</button></a>
-    <a href="https://cash.app/" target="_blank"><button class="button">Send Money</button></a>
-    <a href="https://www.forex.com/" target="_blank"><button class="button">Forex Trading</button></a>
-    <a href="https://www.spotify.com/" target="_blank"><button class="button">Music & Calm</button></a>
-    <a href="https://www.coupons.com/" target="_blank"><button class="button">Meal Deals & Coupons</button></a>
-    <a href="https://www.bet365.com/" target="_blank"><button class="button">Betting</button></a>
-    <a href="https://www.acorns.com/" target="_blank"><button class="button">Savings & Acorns</button></a>
-    <a href="https://www.mentalhealth.gov/" target="_blank"><button class="button">Mental Health</button></a>
+    <button class="button">Jobs</button>
+    <button class="button">Food & Aid</button>
+    <button class="button">Health & Fitness</button>
+    <button class="button">Shelter & Housing</button>
+    <button class="button">Education & Skills</button>
+    <button class="button">AI Assistant</button>
+    <button class="button">Grants</button>
+    <button class="button">Justice Support</button>
+    <button class="button">Buy a Car</button>
+    <button class="button">Buy a Home</button>
   </section>
-
-  <footer>
-    © 2025 People First App. All rights reserved.
-  </footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>People First App</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://i.ibb.co/Wn8mx1G/city-bg.gif') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-      overflow-x: hidden;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px 20px 20px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      animation: glow 4s ease-in-out infinite alternate;
-    }
-
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-style: italic;
-      font-size: 1.1em;
-      color: #ccc;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #00f, 0 0 20px #9000ff; }
-      to { text-shadow: 0 0 20px #00eaff, 0 0 40px #a200ff; }
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-      padding: 30px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .button {
-      background: rgba(58, 0, 104, 0.8);
-      border: none;
-      border-radius: 14px;
-      padding: 20px;
-      font-size: 1em;
-      font-weight: bold;
-      color: #fff;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(3px);
-    }
-
-    .button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px #a400ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #ddd;
-      background: rgba(0, 0, 0, 0.6);
-      margin-top: 30px;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>People First App</h1>
-    <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
-  </header>
-
-  <section class="grid">
-    <a href="https://justice.gov" target="_blank"><button class="button">Justice Support</button></a>
-    <a href="https://indeed.com" target="_blank"><button class="button">Jobs</button></a>
-    <a href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank"><button class="button">Food & Aid</button></a>
-    <a href="https://www.healthline.com/fitness" target="_blank"><button class="button">Health & Fitness</button></a>
-    <a href="https://www.hud.gov/findshelter" target="_blank"><button class="button">Shelter & Housing</button></a>
-    <a href="https://www.coursera.org/" target="_blank"><button class="button">Education & Skills</button></a>
-    <a href="https://chat.openai.com/" target="_blank"><button class="button">AI Assistant</button></a>
-    <a href="https://www.grants.gov/" target="_blank"><button class="button">Grants</button></a>
-    <a href="https://www.autotrader.com/" target="_blank"><button class="button">Buy a Car</button></a>
-    <a href="https://www.zillow.com/" target="_blank"><button class="button">Buy a Home</button></a>
-    <a href="https://robinhood.com/" target="_blank"><button class="button">Buy Stocks</button></a>
-    <a href="https://cash.app/" target="_blank"><button class="button">Send Money</button></a>
-    <a href="https://www.forex.com/" target="_blank"><button class="button">Forex Trading</button></a>
-    <a href="https://www.spotify.com/" target="_blank"><button class="button">Music & Calm</button></a>
-    <a href="https://www.coupons.com/" target="_blank"><button class="button">Meal Deals & Coupons</button></a>
-    <a href="https://www.bet365.com/" target="_blank"><button class="button">Betting</button></a>
-    <a href="https://www.acorns.com/" target="_blank"><button class="button">Savings & Acorns</button></a>
-    <a href="https://www.mentalhealth.gov/" target="_blank"><button class="button">Mental Health</button></a>
-  </section>
-
   <footer>
     © 2025 People First App. All rights reserved.
   </footer>
