@@ -1,168 +1,153 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>People First App</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }body, html {
-  height: 100%;
-  overflow-x: hidden;
-}
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: white;
+      text-align: center;
+      scroll-behavior: smooth;
+      background-color: black;
+    }
 
-body {
-  color: #fff;
-  scroll-behavior: smooth;
-}
+    /* 🔄 Background Video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
 
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(9, 0, 23, 0.8), rgba(26, 0, 51, 0.85));
+      z-index: -1;
+    }
 
-#background video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+    header {
+      padding: 40px 20px 10px;
+    }
 
-#background video.active {
-  opacity: 1;
-}
+    h1 {
+      font-size: 2.5em;
+      color: #00f6ff;
+      text-shadow: 0 0 10px #00f6ff;
+      margin-bottom: 10px;
+    }
 
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
+    p {
+      color: #cccccc;
+      font-style: italic;
+      font-size: 1em;
+      margin-top: 0;
+    }
 
-h1 {
-  font-size: 32px;
-  color: #fff;
-  text-shadow: 0 0 12px #00ffff;
-}
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-p.subtitle {
-  font-style: italic;
-  font-size: 15px;
-  margin-top: 10px;
-  color: #bbb;
-}
+    .menu button {
+      background-color: #3a0075;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      padding: 16px 30px;
+      margin: 10px 0;
+      font-size: 18px;
+      width: 80%;
+      max-width: 350px;
+      box-shadow: 0 0 15px #8f00ff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
 
-.button {
-  display: block;
-  margin: 15px auto;
-  padding: 16px;
-  width: 90%;
-  background: #3d0066;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  font-size: 18px;
-  box-shadow: 0 0 10px #9400ff;
-  text-align: center;
-  transition: 0.3s;
-  text-decoration: none;
-}
+    .menu button:hover {
+      box-shadow: 0 0 25px #00f6ff;
+      transform: scale(1.02);
+    }
 
-.button:hover {
-  background: #6200cc;
-  box-shadow: 0 0 15px #cc66ff;
-}
+    section {
+      padding: 80px 20px;
+      background: rgba(0, 0, 0, 0.25);
+      border-top: 1px solid #444;
+    }
 
-section {
-  padding: 40px 20px;
-  margin-top: 30px;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-h2, h3 {
-  color: #FFD700;
-  margin-bottom: 15px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-.tag {
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
+    section h2 {
+      color: #00f6ff;
+      text-shadow: 0 0 8px #00f6ff;
+    }
   </style>
 </head>
-<body>  <div id="background">
-    <video id="vid1" class="active" autoplay muted loop>
-      <source src="city-cars.mp4" type="video/mp4" />
-    </video>
-    <video id="vid2" autoplay muted loop>
-      <source src="skateboarding.mp4" type="video/mp4" />
-    </video>
-    <video id="vid3" autoplay muted loop>
-      <source src="stage-performance.mp4" type="video/mp4" />
-    </video>
-  </div>  <header>
-    <h1>People First App</h1>
-    <p class="subtitle">
-      Futuristic one-stop life system – invented by a Black man, powered by the people.
-    </p>
-  </header><a href="#jobs" class="button">Jobs</a> <a href="#food" class="button">Food & Aid</a> <a href="#fitness" class="button">Health & Fitness</a> <a href="#housing" class="button">Shelter & Housing</a> <a href="#education" class="button">Education & Skills</a> <a href="#assistant" class="button">AI Assistant</a> <a href="#economy" class="button">Economic Power</a>
+<body>
 
-  <section id="jobs">
-    <h2>Jobs</h2>
-    <p>Explore job boards, gig apps, freelance tools, and remote work opportunities near you.</p>
-  </section>  <section id="food">
-    <h2>Food & Aid</h2>
-    <p>Get food assistance, meal coupons, EBT locations, and connect with local aid programs.</p>
-  </section>  <section id="fitness">
-    <h2>Health & Fitness</h2>
-    <p>Access workout videos, therapy platforms, clinics, mental health support, and more.</p>
-  </section>  <section id="housing">
-    <h2>Shelter & Housing</h2>
-    <p>Find temporary and long-term housing, shelters, transitional living, and rent support tools.</p>
-  </section>  <section id="education">
-    <h2>Education & Skills</h2>
-    <p>Access free learning platforms, resume builders, and skills that prepare you for better jobs.</p>
-  </section>  <section id="assistant">
-    <h2>AI Assistant</h2>
-    <p>Ask questions, get advice, and let the AI help you with goals, resources, or life challenges.</p>
-  </section>  <section id="economy">
-    <h2>ECONOMIC POWER TO THE PEOPLE</h2>
-    <p><i>"If you live in the country, you own part of the country."</i></p>
-    <p>In your Government System™, every citizen becomes a stakeholder in the nation’s operations...</p>
-  </section>  <script>
-    const videos = [
-      document.getElementById('vid1'),
-      document.getElementById('vid2'),
-      document.getElementById('vid3')
-    ];
-    let index = 0;
-    setInterval(() => {
-      videos.forEach((v, i) => v.classList.remove('active'));
-      index = (index + 1) % videos.length;
-      videos[index].classList.add('active');
-    }, 15000);
-  </script></body>
+  <!-- 🔄 Background Video -->
+  <video id="bgVideo" autoplay muted class="video-bg"></video>
+  <div class="overlay"></div>
+
+  <header>
+    <h1>People First App</h1>
+    <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
+  </header>
+
+  <div class="menu">
+    <button onclick="scrollToSection('jobs')">Jobs</button>
+    <button onclick="scrollToSection('food')">Food & Aid</button>
+    <button onclick="scrollToSection('health')">Health & Fitness</button>
+    <button onclick="scrollToSection('shelter')">Shelter & Housing</button>
+    <button onclick="scrollToSection('education')">Education & Skills</button>
+    <button onclick="scrollToSection('ai')">AI Assistant</button>
+    <button onclick="scrollToSection('economic')">Economic Power</button>
+  </div>
+
+  <!-- 💡 Sections -->
+  <section id="jobs"><h2>Jobs</h2><p>Search gigs, remote work, and full-time jobs.</p></section>
+  <section id="food"><h2>Food & Aid</h2><p>Locate nearby food, free meals, and assistance.</p></section>
+  <section id="health"><h2>Health & Fitness</h2><p>Mental health, workout plans, wellness resources.</p></section>
+  <section id="shelter"><h2>Shelter & Housing</h2><p>Emergency shelters, rent help, housing programs.</p></section>
+  <section id="education"><h2>Education & Skills</h2><p>Free courses, training programs, and schools.</p></section>
+  <section id="ai"><h2>AI Assistant</h2><p>Let AI help you navigate life’s challenges and tools.</p></section>
+  <section id="economic"><h2>Economic Power</h2><p>Earn income through national digital equity tools.</p></section>
+
+  <!-- 🔁 Video Rotator Script -->
+  <script>
+    const videos = ['city.mp4', 'skate.mp4', 'concert.mp4'];
+    let idx = 0;
+    const bg = document.getElementById('bgVideo');
+
+    function loadVideo(i) {
+      bg.src = videos[i];
+      bg.load();
+      bg.oncanplaythrough = () => bg.play();
+    }
+
+    bg.addEventListener('ended', () => {
+      idx = (idx + 1) % videos.length;
+      loadVideo(idx);
+    });
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    loadVideo(idx);
+  </script>
+
+</body>
 </html>
