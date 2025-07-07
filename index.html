@@ -4,153 +4,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People First App</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      background-color: #000;
-      overflow-x: hidden;
-    }
-    header {
-      background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
-      text-align: center;
-      padding: 4rem 1rem 2rem;
-      position: relative;
-      z-index: 2;
-    }
-    h1 {
-      font-size: 2.8rem;
-      margin: 0;
-      color: #fff;
-    }
-    p.tagline {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-top: 0.5rem;
-    }
-    .button {
-      display: block;
-      width: 80%;
-      max-width: 300px;
-      margin: 1rem auto;
-      padding: 1rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 12px;
-      background: #3f0071;
-      box-shadow: 0 0 10px #a259ff;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background: #5e00a3;
-    }
-    .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-    .content {
-      position: relative;
-      z-index: 2;
-      padding-bottom: 3rem;
-    }
-    .section-title {
-      font-size: 2rem;
-      margin-top: 2rem;
-      color: #ffd700;
-      text-align: center;
-    }
-    .section {
-      background: rgba(0, 0, 0, 0.7);
-      margin: 2rem auto;
-      padding: 1.5rem;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 700px;
-      line-height: 1.6;
-    }
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#background video.active {
+  opacity: 1;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 0 12px #00ffff;
+}
+
+p.subtitle {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+.button {
+  display: block;
+  margin: 15px auto;
+  padding: 16px;
+  width: 90%;
+  background: #3d0066;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  box-shadow: 0 0 10px #9400ff;
+  text-align: center;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #6200cc;
+  box-shadow: 0 0 15px #cc66ff;
+}
+
+section {
+  padding: 40px 20px;
+  margin-top: 30px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+h2, h3 {
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.tag {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
   </style>
 </head>
-<body>
-  <video autoplay muted loop class="video-bg">
-    <source src="https://cdn.pixabay.com/video/2023/06/21/173247-835472250_large.mp4" type="video/mp4">
-  </video>  <header>
+<body>  <div id="background">
+    <video id="vid1" class="active" autoplay muted loop>
+      <source src="city-cars.mp4" type="video/mp4" />
+    </video>
+    <video id="vid2" autoplay muted loop>
+      <source src="skateboarding.mp4" type="video/mp4" />
+    </video>
+    <video id="vid3" autoplay muted loop>
+      <source src="stage-performance.mp4" type="video/mp4" />
+    </video>
+  </div>  <header>
     <h1>People First App</h1>
-    <p class="tagline">Futuristic one-stop life system — invented by a Black man, powered by the people.</p>
-  </header>  <div class="content">
-    <a href="#justice" class="button">Justice Support</a>
-    <a href="#jobs" class="button">Jobs</a>
-    <a href="#food" class="button">Food & Aid</a>
-    <a href="#health" class="button">Health & Fitness</a>
-    <a href="#housing" class="button">Shelter & Housing</a>
-    <a href="#education" class="button">Education & Skills</a>
-    <a href="#ai" class="button">AI Assistant</a><div class="section" id="justice">
-  <h2 class="section-title">ECONOMIC POWER TO THE PEOPLE</h2>
-  <p><strong>"If you live in the country, you own part of the country."</strong></p>
-  <p><strong>Wealth Redistribution Through Digital Equity</strong><br>
-  In your Government System™, every citizen becomes a stakeholder in the nation’s operations. The system ensures that every policy you vote on, every resource your state contributes, and every federal contract generates income tracked on the blockchain and shared with the people who help power the nation.</p>
+    <p class="subtitle">
+      Futuristic one-stop life system – invented by a Black man, powered by the people.
+    </p>
+  </header><a href="#jobs" class="button">Jobs</a> <a href="#food" class="button">Food & Aid</a> <a href="#fitness" class="button">Health & Fitness</a> <a href="#housing" class="button">Shelter & Housing</a> <a href="#education" class="button">Education & Skills</a> <a href="#assistant" class="button">AI Assistant</a> <a href="#economy" class="button">Economic Power</a>
 
-  <h3>🔹 How It Works</h3>
-  <strong>🟦 Contribution Inputs:</strong>
-  <ul>
-    <li>Voting, policy feedback, resource management</li>
-    <li>Education, civil service, innovation, IP</li>
-  </ul>
-  <strong>🟧 System Processing:</strong>
-  <ul>
-    <li>Smart contracts and blockchain ledgers track everything</li>
-    <li>AI verifies authentic contribution and assigns token values</li>
-  </ul>
-  <strong>🟩 Output: Citizen Revenue</strong>
-  <ul>
-    <li>Monthly payouts from national earnings: taxes, exports, IP, etc.</li>
-  </ul>
-
-  <h3>🔸 App Features</h3>
-  <ul>
-    <li><strong>National Profit Sharing Wallet:</strong> Payouts tracked with full transparency</li>
-    <li><strong>Creator Licensing Pool:</strong> Upload IP, earn globally when it’s used</li>
-    <li><strong>Resource Equity Engine:</strong> Revenue shares based on your region’s output</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h2 class="section-title">GOVERNMENT SYSTEM™</h2>
-  <p><strong>"Run the country with fair order, not humans."</strong></p>
-
-  <p>The Government System App is a digital platform that replaces corrupt decision-making with transparent automation. It oversees laws, elections, policies, and especially law enforcement to ensure justice is equal, data-driven, and accountable.</p>
-
-  <h3>⚖️ Justice & Law Enforcement Oversight</h3>
-  <ul>
-    <li>AI monitors arrests, use of force, and video footage in real time</li>
-    <li>Flags planted evidence, bias, or violations</li>
-    <li>Cross-verifies witness statements, timelines, and surveillance</li>
-  </ul>
-
-  <h3>🏛 Court AI & Sentencing</h3>
-  <ul>
-    <li>Automated sentencing using precedent, facts, and fairness</li>
-    <li>No bias based on race or wealth</li>
-  </ul>
-
-  <h3>🕵️‍♀️ Federal Oversight</h3>
-  <ul>
-    <li>Monitors DEA, FBI, ATF for wrongful actions</li>
-    <li>Anonymous whistleblower AI validation system</li>
-    <li>Triggers public alerts and investigations when needed</li>
-  </ul>
-
-  <h3>🔸 Key Benefits to Humanity</h3>
-  <p>This is the first system of its kind in the world, created by a Black man to bring power, wealth, and justice to the people.</p>
-</div>
-
-  </div>
-</body>
+  <section id="jobs">
+    <h2>Jobs</h2>
+    <p>Explore job boards, gig apps, freelance tools, and remote work opportunities near you.</p>
+  </section>  <section id="food">
+    <h2>Food & Aid</h2>
+    <p>Get food assistance, meal coupons, EBT locations, and connect with local aid programs.</p>
+  </section>  <section id="fitness">
+    <h2>Health & Fitness</h2>
+    <p>Access workout videos, therapy platforms, clinics, mental health support, and more.</p>
+  </section>  <section id="housing">
+    <h2>Shelter & Housing</h2>
+    <p>Find temporary and long-term housing, shelters, transitional living, and rent support tools.</p>
+  </section>  <section id="education">
+    <h2>Education & Skills</h2>
+    <p>Access free learning platforms, resume builders, and skills that prepare you for better jobs.</p>
+  </section>  <section id="assistant">
+    <h2>AI Assistant</h2>
+    <p>Ask questions, get advice, and let the AI help you with goals, resources, or life challenges.</p>
+  </section>  <section id="economy">
+    <h2>ECONOMIC POWER TO THE PEOPLE</h2>
+    <p><i>"If you live in the country, you own part of the country."</i></p>
+    <p>In your Government System™, every citizen becomes a stakeholder in the nation’s operations...</p>
+  </section>  <script>
+    const videos = [
+      document.getElementById('vid1'),
+      document.getElementById('vid2'),
+      document.getElementById('vid3')
+    ];
+    let index = 0;
+    setInterval(() => {
+      videos.forEach((v, i) => v.classList.remove('active'));
+      index = (index + 1) % videos.length;
+      videos[index].classList.add('active');
+    }, 15000);
+  </script></body>
 </html>
