@@ -55,27 +55,22 @@
     }
 
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    section .label {
-      font-size: 1.2em;
-      color: #aaa;
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-
     section p {
+      font-size: 1.1em;
+      line-height: 1.6;
       color: #ccc;
-      font-size: 1em;
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
 
   <h1>People First App</h1>
-  <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
+  <p>One-stop life support system — built for the people, by the people.</p>
 
   <div class="menu">
     <button onclick="scrollToSection('jobs')">Jobs</button>
@@ -88,43 +83,37 @@
   </div>
 
   <section id="jobs">
-    <div class="label">Jobs Section</div>
-    <p>Search gigs, remote work, and full-time jobs.</p>
+    <p>Explore real-time job boards, government employment programs, and freelance work. Tools for resumes, interview prep, and gig economy links will live here.</p>
   </section>
 
   <section id="food">
-    <div class="label">Food & Aid Section</div>
-    <p>Locate nearby food, free meals, and assistance.</p>
+    <p>Connect to food banks, SNAP benefits, and free meal programs. This section helps locate real-time food access services nearby.</p>
   </section>
 
   <section id="health">
-    <div class="label">Health & Fitness Section</div>
-    <p>Mental health, workout plans, wellness resources.</p>
+    <p>Support for mental health, fitness plans, self-care routines, and access to free/affordable care options — coming soon.</p>
   </section>
 
   <section id="shelter">
-    <div class="label">Shelter & Housing Section</div>
-    <p>Emergency shelters, rent help, and housing programs.</p>
+    <p>Get immediate help with emergency shelters, housing programs, rent assistance, and housing rights education.</p>
   </section>
 
   <section id="education">
-    <div class="label">Education & Skills Section</div>
-    <p>Free training, certifications, online learning & more.</p>
+    <p>From GED programs to scholarships, job training to online universities — this hub connects you to real learning opportunities.</p>
   </section>
 
   <section id="ai">
-    <div class="label">AI Assistant</div>
-    <p>Ask questions and get support from your digital assistant.</p>
+    <p>This will be your smart assistant for fast answers, help finding resources, and asking about laws, benefits, or emergencies.</p>
   </section>
 
   <section id="economic">
-    <div class="label">Economic Power</div>
-    <p>Earn, invest, and grow wealth through people-first economics.</p>
+    <p>Track how your contributions to society (voting, labor, service) create income. This is the core of the People First wealth-sharing model.</p>
   </section>
 
   <script>
     function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      const section = document.getElementById(id);
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 
