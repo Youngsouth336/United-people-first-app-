@@ -1,170 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People First App</title>
   <style>
     body {
-      background: linear-gradient(to bottom right, #160032, #320065);
-      color: white;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0a0024, #280046);
+      color: #ffffff;
+      overflow-x: hidden;
     }
-    h1, h2 {
+    header {
       text-align: center;
-      margin: 20px;
+      padding: 50px 20px 20px 20px;
+      background: radial-gradient(circle, #45008a 0%, #000010 100%);
+      color: #fff;
+      animation: glow 4s ease-in-out infinite alternate;
     }
-    p {
-      text-align: center;
-      margin: 10px 20px;
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
-    .button-grid {
+    header p {
+      font-style: italic;
+      font-size: 1.1em;
+      color: #ccc;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f, 0 0 20px #9000ff; }
+      to { text-shadow: 0 0 20px #00eaff, 0 0 40px #a200ff; }
+    }
+    .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 20px;
-      max-width: 600px;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
       margin: auto;
     }
-    .button-grid a {
-      background: #5400a5;
-      color: white;
-      text-decoration: none;
-      padding: 15px;
-      border-radius: 10px;
+    .button {
+      background: linear-gradient(145deg, #3a0068, #180040);
+      border: none;
+      border-radius: 14px;
+      padding: 20px;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #8800ff;
+    }
+    footer {
       text-align: center;
-      box-shadow: 0 0 10px #5e00ff;
-      transition: background 0.3s;
-    }
-    .button-grid a:hover {
-      background: #7e00cc;
-    }
-    section {
-      padding: 30px 20px;
-      border-top: 1px solid #ffffff33;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-
-  <h1>People First App</h1>
-  <p><em>Futuristic one-stop life system – invented by a Black man, powered by the people.</em></p>
-
-  <div class="button-grid">
-    <a href="#jobs">Jobs</a>
-    <a href="#food">Food & Aid</a>
-    <a href="#health">Health & Fitness</a>
-    <a href="#shelter">Shelter & Housing</a>
-    <a href="#education">Education & Skills</a>
-    <a href="#ai">AI Assistant</a>
-    <a href="#grants">Grants</a>
-    <a href="#justice">Justice Support</a>
-    <a href="#car">Buy a Car</a>
-    <a href="#home">Buy a Home</a>
-  </div>
-
-  <section id="jobs">
-    <h2>Jobs</h2>
-    <p>Search job listings, freelance gigs, and work near you:</p>
-    <ul>
-      <li>🚚 Delivery & gig jobs</li>
-      <li>💻 Remote tech work</li>
-      <li>👷 Construction & labor</li>
-      <li>📦 Logistics & packaging</li>
-    </ul>
+  <header>
+    <h1>People First App</h1>
+    <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
+  </header>
+  <section class="grid">
+    <button class="button">Jobs</button>
+    <button class="button">Food & Aid</button>
+    <button class="button">Health & Fitness</button>
+    <button class="button">Shelter & Housing</button>
+    <button class="button">Education & Skills</button>
+    <button class="button">AI Assistant</button>
+    <button class="button">Grants</button>
+    <button class="button">Justice Support</button>
+    <button class="button">Buy a Car</button>
+    <button class="button">Buy a Home</button>
   </section>
-
-  <section id="food">
-    <h2>Food & Aid</h2>
-    <p>Find emergency meals and grocery support:</p>
-    <ul>
-      <li>🍱 Meal programs</li>
-      <li>🏬 Food banks</li>
-      <li>🧃 WIC & EBT help</li>
-    </ul>
-  </section>
-
-  <section id="health">
-    <h2>Health & Fitness</h2>
-    <p>Take care of your mind and body:</p>
-    <ul>
-      <li>🏥 Free clinics</li>
-      <li>🧘 Mental health tools</li>
-      <li>💪 Workouts & nutrition</li>
-    </ul>
-  </section>
-
-  <section id="shelter">
-    <h2>Shelter & Housing</h2>
-    <p>Secure safe and stable housing:</p>
-    <ul>
-      <li>🏠 Shelter locations</li>
-      <li>💸 Rent help</li>
-      <li>🏢 Affordable housing</li>
-    </ul>
-  </section>
-
-  <section id="education">
-    <h2>Education & Skills</h2>
-    <p>Free training, school, and learning tools:</p>
-    <ul>
-      <li>📚 Online courses</li>
-      <li>🎓 Scholarships</li>
-      <li>🧠 Resume & skills building</li>
-    </ul>
-  </section>
-
-  <section id="ai">
-    <h2>AI Assistant</h2>
-    <p>Ask life questions, get help, find solutions:</p>
-    <ul>
-      <li>🤖 24/7 smart assistant</li>
-      <li>📊 Budgeting & advice</li>
-      <li>📍 Local resource locator</li>
-    </ul>
-  </section>
-
-  <section id="grants">
-    <h2>Grants</h2>
-    <p>Apply for government and private funding:</p>
-    <ul>
-      <li>💰 Small business grants</li>
-      <li>🏡 Housing assistance</li>
-      <li>👩‍🏫 Education funding</li>
-    </ul>
-  </section>
-
-  <section id="justice">
-    <h2>Justice Support</h2>
-    <p>Fair law. Transparent system. Real protection:</p>
-    <ul>
-      <li>⚖️ Sentencing checker</li>
-      <li>📹 Police video analyzer</li>
-      <li>📢 Case tracking system</li>
-    </ul>
-  </section>
-
-  <section id="car">
-    <h2>Buy a Car</h2>
-    <p>Shop for affordable, verified cars:</p>
-    <ul>
-      <li>🚗 Local dealers</li>
-      <li>🛠️ Car repair help</li>
-      <li>📃 DMV forms & info</li>
-    </ul>
-  </section>
-
-  <section id="home">
-    <h2>Buy a Home</h2>
-    <p>Steps to become a homeowner:</p>
-    <ul>
-      <li>🏘️ First-time buyer tools</li>
-      <li>💵 Down payment grants</li>
-      <li>📈 Credit repair & guidance</li>
-    </ul>
-  </section>
-
+  <footer>
+    © 2025 People First App. All rights reserved.
+  </footer>
 </body>
 </html>
