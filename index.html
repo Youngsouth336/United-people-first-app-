@@ -5,147 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People First App</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      height: 100%;
+      background: url('https://media.giphy.com/media/JrUOaGJbFlMWI/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
       overflow-x: hidden;
-    }
-    /* Video Background */
-    #video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
     header {
       text-align: center;
-      padding: 60px 20px 20px 20px;
-      background: rgba(0,0,0,0.6);
+      padding: 50px 20px 20px 20px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      animation: glow 4s ease-in-out infinite alternate;
     }
     header h1 {
       font-size: 2.5em;
-      color: #fff;
-      text-shadow: 0 0 10px #00f, 0 0 20px #9000ff;
+      margin-bottom: 10px;
     }
     header p {
       font-style: italic;
       font-size: 1.1em;
       color: #ccc;
     }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00f, 0 0 20px #9000ff; }
+      to { text-shadow: 0 0 20px #00eaff, 0 0 40px #a200ff; }
+    }
     .grid {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 20px;
       padding: 30px;
-      max-width: 600px;
+      max-width: 1000px;
       margin: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
     }
     .button {
-      background: rgba(18, 0, 38, 0.85);
+      background: linear-gradient(145deg, #3a0068, #180040);
       border: none;
       border-radius: 14px;
-      padding: 18px;
-      font-size: 1.1em;
-      color: white;
+      padding: 20px;
+      font-size: 1em;
+      color: #fff;
       cursor: pointer;
-      text-align: center;
-      box-shadow: 0 0 15px #9000ff;
-      transition: transform 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
     .button:hover {
       transform: scale(1.05);
-      background-color: rgba(36, 0, 70, 0.9);
-    }
-    section[id] {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 20px;
-      margin-bottom: 40px;
-    }
-    section h2 {
-      color: #00eaff;
+      box-shadow: 0 0 20px #8800ff;
     }
     footer {
       text-align: center;
       padding: 20px;
+      font-size: 0.9em;
       color: #aaa;
-      background: rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.5);
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-
-  <!-- VIDEO BACKGROUND -->
-  <video id="video-bg" autoplay muted loop>
-    <source src="https://cdn.pixabay.com/video/2023/03/29/157566-815948720_large.mp4" type="video/mp4">
-    <!-- Add more scenes in future by switching videos -->
-  </video>
-
   <header>
     <h1>People First App</h1>
     <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
   </header>
 
-  <div class="grid">
-    <a class="button" href="#justice">Justice Support</a>
-    <a class="button" href="#jobs">Jobs</a>
-    <a class="button" href="#food">Food & Aid</a>
-    <a class="button" href="#health">Health & Fitness</a>
-    <a class="button" href="#shelter">Shelter & Housing</a>
-    <a class="button" href="#education">Education & Skills</a>
-    <a class="button" href="#ai">AI Assistant</a>
-  </div>
-
-  <!-- Sections -->
-  <section id="justice">
-    <h2>Justice Support</h2>
-    <p>Find expungement help, civil rights legal aid, and resources for those impacted by the justice system.</p>
-  </section>
-
-  <section id="jobs">
-    <h2>Jobs</h2>
-    <p>Explore job boards, gig apps, freelance tools, and remote work opportunities near you.</p>
-  </section>
-
-  <section id="food">
-    <h2>Food & Aid</h2>
-    <p>Get food assistance, meal coupons, EBT locations, and connect with local aid programs.</p>
-  </section>
-
-  <section id="health">
-    <h2>Health & Fitness</h2>
-    <p>Access workout videos, therapy platforms, clinics, mental health support, and more.</p>
-  </section>
-
-  <section id="shelter">
-    <h2>Shelter & Housing</h2>
-    <p>Find emergency housing, rent assistance, low-income homes, and shelter connections.</p>
-  </section>
-
-  <section id="education">
-    <h2>Education & Skills</h2>
-    <p>Learn new skills through free courses, trade training, GED programs, and more.</p>
-  </section>
-
-  <section id="ai">
-    <h2>AI Assistant</h2>
-    <p>Talk to our built-in AI assistant to get help with any life problem or resource — available 24/7.</p>
+  <section class="grid">
+    <a href="justice.html"><button class="button">Justice Support</button></a>
+    <a href="jobs.html"><button class="button">Jobs</button></a>
+    <a href="food.html"><button class="button">Food & Aid</button></a>
+    <a href="health.html"><button class="button">Health & Fitness</button></a>
+    <a href="housing.html"><button class="button">Shelter & Housing</button></a>
+    <a href="education.html"><button class="button">Education & Skills</button></a>
+    <a href="ai.html"><button class="button">AI Assistant</button></a>
+    <a href="grants.html"><button class="button">Grants</button></a>
+    <a href="car.html"><button class="button">Buy a Car</button></a>
+    <a href="home.html"><button class="button">Buy a Home</button></a>
+    <a href="stocks.html"><button class="button">Stocks & Investments</button></a>
+    <a href="money.html"><button class="button">Send/Receive Money</button></a>
+    <a href="forex.html"><button class="button">Forex Trading</button></a>
+    <a href="music.html"><button class="button">Music Hub</button></a>
+    <a href="meals.html"><button class="button">Meal Deals</button></a>
+    <a href="betting.html"><button class="button">Betting</button></a>
+    <a href="savings.html"><button class="button">Savings Tools</button></a>
+    <a href="mental.html"><button class="button">Mental Health</button></a>
   </section>
 
   <footer>
     © 2025 People First App. All rights reserved.
   </footer>
-
 </body>
 </html>
