@@ -2,161 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People First App</title>
   <style>
     * {
       box-sizing: border-box;
     }
-    body {
+    body, html {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #000;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
-      scroll-behavior: smooth;
-      position: relative;
-      z-index: 1;
+      height: 100%;
+      overflow-x: hidden;
     }
-
-    /* 🔄 Background video */
-    video.bg-video {
+    /* Video Background */
+    #video-bg {
       position: fixed;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
+      z-index: -1;
       width: 100%;
       height: 100%;
-      background: rgba(10, 0, 30, 0.7);
-      z-index: -1;
+      object-fit: cover;
     }
-
     header {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 60px 20px 20px 20px;
+      background: rgba(0,0,0,0.6);
     }
-
     header h1 {
       font-size: 2.5em;
-      color: #00f6ff;
-      text-shadow: 0 0 15px #00f6ff;
-      margin: 0;
+      color: #fff;
+      text-shadow: 0 0 10px #00f, 0 0 20px #9000ff;
     }
-
     header p {
       font-style: italic;
-      color: #ccc;
-      margin-top: 10px;
-    }
-
-    .menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .menu button {
-      background-color: #3a0075;
-      color: white;
-      border: none;
-      border-radius: 16px;
-      padding: 16px 30px;
-      margin: 10px 0;
-      font-size: 18px;
-      width: 80%;
-      max-width: 350px;
-      box-shadow: 0 0 15px #8f00ff;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .menu button:hover {
-      box-shadow: 0 0 25px #00f6ff;
-      transform: scale(1.02);
-    }
-
-    section {
-      padding: 80px 20px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    section p {
       font-size: 1.1em;
       color: #ccc;
-      margin: 0 auto;
+    }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px;
       max-width: 600px;
+      margin: auto;
+    }
+    .button {
+      background: rgba(18, 0, 38, 0.85);
+      border: none;
+      border-radius: 14px;
+      padding: 18px;
+      font-size: 1.1em;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      box-shadow: 0 0 15px #9000ff;
+      transition: transform 0.2s ease;
+    }
+    .button:hover {
+      transform: scale(1.05);
+      background-color: rgba(36, 0, 70, 0.9);
+    }
+    section[id] {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+    section h2 {
+      color: #00eaff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      background: rgba(0,0,0,0.7);
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔄 Background Video -->
-  <video autoplay muted loop class="bg-video">
-    <source src="bg.mp4" type="video/mp4" />
+  <!-- VIDEO BACKGROUND -->
+  <video id="video-bg" autoplay muted loop>
+    <source src="https://cdn.pixabay.com/video/2023/03/29/157566-815948720_large.mp4" type="video/mp4">
+    <!-- Add more scenes in future by switching videos -->
   </video>
-  <div class="overlay"></div>
 
-  <!-- Header -->
   <header>
     <h1>People First App</h1>
-    <p>One-stop system for jobs, aid, health, housing & more.</p>
+    <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
   </header>
 
-  <!-- Buttons -->
-  <div class="menu">
-    <button onclick="scrollToSection('jobs')">Jobs</button>
-    <button onclick="scrollToSection('food')">Food & Aid</button>
-    <button onclick="scrollToSection('health')">Health & Fitness</button>
-    <button onclick="scrollToSection('shelter')">Shelter & Housing</button>
-    <button onclick="scrollToSection('education')">Education & Skills</button>
-    <button onclick="scrollToSection('ai')">AI Assistant</button>
-    <button onclick="scrollToSection('economic')">Economic Power</button>
+  <div class="grid">
+    <a class="button" href="#justice">Justice Support</a>
+    <a class="button" href="#jobs">Jobs</a>
+    <a class="button" href="#food">Food & Aid</a>
+    <a class="button" href="#health">Health & Fitness</a>
+    <a class="button" href="#shelter">Shelter & Housing</a>
+    <a class="button" href="#education">Education & Skills</a>
+    <a class="button" href="#ai">AI Assistant</a>
   </div>
 
   <!-- Sections -->
+  <section id="justice">
+    <h2>Justice Support</h2>
+    <p>Find expungement help, civil rights legal aid, and resources for those impacted by the justice system.</p>
+  </section>
+
   <section id="jobs">
-    <p>Search for gigs, full-time jobs, or remote work that fits your lifestyle.</p>
+    <h2>Jobs</h2>
+    <p>Explore job boards, gig apps, freelance tools, and remote work opportunities near you.</p>
   </section>
 
   <section id="food">
-    <p>Find nearby food banks, free meals, EBT info, and emergency supplies.</p>
+    <h2>Food & Aid</h2>
+    <p>Get food assistance, meal coupons, EBT locations, and connect with local aid programs.</p>
   </section>
 
   <section id="health">
-    <p>Access mental health support, home workouts, self-care, and clinics.</p>
+    <h2>Health & Fitness</h2>
+    <p>Access workout videos, therapy platforms, clinics, mental health support, and more.</p>
   </section>
 
   <section id="shelter">
-    <p>Connect to emergency shelters, housing programs, or rent assistance.</p>
+    <h2>Shelter & Housing</h2>
+    <p>Find emergency housing, rent assistance, low-income homes, and shelter connections.</p>
   </section>
 
   <section id="education">
-    <p>Get certified, earn your GED, or take free online classes and trade skills.</p>
+    <h2>Education & Skills</h2>
+    <p>Learn new skills through free courses, trade training, GED programs, and more.</p>
   </section>
 
   <section id="ai">
-    <p>Ask anything — your AI assistant will guide you to tools and answers fast.</p>
+    <h2>AI Assistant</h2>
+    <p>Talk to our built-in AI assistant to get help with any life problem or resource — available 24/7.</p>
   </section>
 
-  <section id="economic">
-    <p>Learn how national equity, voting, and digital contributions create income.</p>
-  </section>
-
-  <script>
-    function scrollToSection(id) {
-      const section = document.getElementById(id);
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+  <footer>
+    © 2025 People First App. All rights reserved.
+  </footer>
 
 </body>
 </html>
