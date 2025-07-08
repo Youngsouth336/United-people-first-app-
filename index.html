@@ -2,114 +2,205 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People First App</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://i.ibb.co/Wn8mx1G/city-bg.gif') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-      overflow-x: hidden;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a0033, #330066);
+      color: #fff;
+      padding: 20px;
+      scroll-behavior: smooth;
     }
 
     header {
       text-align: center;
-      padding: 50px 20px 20px 20px;
-      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 32px;
       color: #fff;
-      animation: glow 4s ease-in-out infinite alternate;
+      text-shadow: 0 0 12px #00ffff;
     }
 
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-    }
-
-    header p {
+    p.subtitle {
       font-style: italic;
-      font-size: 1.1em;
-      color: #ccc;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #00f, 0 0 20px #9000ff; }
-      to { text-shadow: 0 0 20px #00eaff, 0 0 40px #a200ff; }
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-      padding: 30px;
-      max-width: 1100px;
-      margin: auto;
+      font-size: 15px;
+      margin-top: 10px;
+      color: #bbb;
     }
 
     .button {
-      background: rgba(58, 0, 104, 0.8);
+      display: block;
+      margin: 15px auto;
+      padding: 16px;
+      width: 90%;
+      background: #3d0066;
+      color: white;
       border: none;
-      border-radius: 14px;
-      padding: 20px;
-      font-size: 1em;
-      font-weight: bold;
-      color: #fff;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(3px);
+      border-radius: 15px;
+      font-size: 18px;
+      box-shadow: 0 0 10px #9400ff;
+      text-align: center;
+      transition: 0.3s;
+      text-decoration: none;
     }
 
     .button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px #a400ff;
+      background: #6200cc;
+      box-shadow: 0 0 15px #cc66ff;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #ddd;
-      background: rgba(0, 0, 0, 0.6);
+    section {
+      padding: 40px 20px;
       margin-top: 30px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.9);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    h2, h3 {
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>People First App</h1>
-    <p>Futuristic one-stop life system – invented by a Black man, powered by the people.</p>
+    <p class="subtitle">
+      Futuristic one-stop life system – invented by a Black man, powered by the people.
+    </p>
   </header>
 
-  <section class="grid">
-    <a href="https://justice.gov" target="_blank"><button class="button">Justice Support</button></a>
-    <a href="https://indeed.com" target="_blank"><button class="button">Jobs</button></a>
-    <a href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank"><button class="button">Food & Aid</button></a>
-    <a href="https://www.healthline.com/fitness" target="_blank"><button class="button">Health & Fitness</button></a>
-    <a href="https://www.hud.gov/findshelter" target="_blank"><button class="button">Shelter & Housing</button></a>
-    <a href="https://www.coursera.org/" target="_blank"><button class="button">Education & Skills</button></a>
-    <a href="https://chat.openai.com/" target="_blank"><button class="button">AI Assistant</button></a>
-    <a href="https://www.grants.gov/" target="_blank"><button class="button">Grants</button></a>
-    <a href="https://www.autotrader.com/" target="_blank"><button class="button">Buy a Car</button></a>
-    <a href="https://www.zillow.com/" target="_blank"><button class="button">Buy a Home</button></a>
-    <a href="https://robinhood.com/" target="_blank"><button class="button">Buy Stocks</button></a>
-    <a href="https://cash.app/" target="_blank"><button class="button">Send Money</button></a>
-    <a href="https://www.forex.com/" target="_blank"><button class="button">Forex Trading</button></a>
-    <a href="https://www.spotify.com/" target="_blank"><button class="button">Music & Calm</button></a>
-    <a href="https://www.coupons.com/" target="_blank"><button class="button">Meal Deals & Coupons</button></a>
-    <a href="https://www.bet365.com/" target="_blank"><button class="button">Betting</button></a>
-    <a href="https://www.acorns.com/" target="_blank"><button class="button">Savings & Acorns</button></a>
-    <a href="https://www.mentalhealth.gov/" target="_blank"><button class="button">Mental Health</button></a>
+  <!-- Glowing Buttons -->
+  <a href="#jobs" class="button">Jobs</a>
+  <a href="#food" class="button">Food & Aid</a>
+  <a href="#fitness" class="button">Health & Fitness</a>
+  <a href="#housing" class="button">Shelter & Housing</a>
+  <a href="#education" class="button">Education & Skills</a>
+  <a href="#assistant" class="button">AI Assistant</a>
+  <a href="#economy" class="button">Economic Power</a>
+
+  <!-- Sections -->
+  <section id="jobs">
+    <h2>Jobs</h2>
+    <p>Explore job boards, gig apps, freelance tools, and remote work opportunities near you.</p>
   </section>
 
-  <footer>
-    © 2025 People First App. All rights reserved.
-  </footer>
+  <section id="food">
+    <h2>Food & Aid</h2>
+    <p>Get food assistance, meal coupons, EBT locations, and connect with local aid programs.</p>
+  </section>
+
+  <section id="fitness">
+    <h2>Health & Fitness</h2>
+    <p>Access workout videos, therapy platforms, clinics, mental health support, and more.</p>
+  </section>
+
+  <section id="housing">
+    <h2>Shelter & Housing</h2>
+    <p>Find temporary and long-term housing, shelters, transitional living, and rent support tools.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education & Skills</h2>
+    <p>Access free learning platforms, resume builders, and skills that prepare you for better jobs.</p>
+  </section>
+
+  <section id="assistant">
+    <h2>AI Assistant</h2>
+    <p>Ask questions, get advice, and let the AI help you with goals, resources, or life challenges.</p>
+  </section>
+
+  <!-- 🔥 ECONOMIC POWER SECTION -->
+  <section id="economy">
+    <h2>ECONOMIC POWER TO THE PEOPLE</h2>
+    <p><i>"If you live in the country, you own part of the country."</i></p>
+
+    <h3>Wealth Redistribution Through Digital Equity</h3>
+    <p>
+      In your Government System™, every citizen becomes a stakeholder in the nation’s operations. Every vote, resource, and contract is tracked on the blockchain and shared with the people.
+    </p>
+
+    <div class="tag" style="color:#33ccff;">🟦 Contribution Inputs:</div>
+    <ul>
+      <li>Voting, feedback, resource management</li>
+      <li>Education, civil service, inventions, IP</li>
+    </ul>
+
+    <div class="tag" style="color:#ff9933;">🟧 System Processing:</div>
+    <ul>
+      <li>Smart contracts track economic activity</li>
+      <li>Blockchain records contributions</li>
+      <li>AI verifies real engagement</li>
+    </ul>
+
+    <div class="tag" style="color:#00cc66;">🟩 Output: Citizen Revenue</div>
+    <ul>
+      <li>Profits from taxes, exports, licensing, media</li>
+      <li>Payouts go into Citizen Wallets monthly</li>
+    </ul>
+
+    <h3 style="color:#00ffcc;">💵 National Profit Sharing Wallet</h3>
+    <p>Verified users get monthly dividends. Transparent, trackable income from national revenue.</p>
+
+    <h3 style="color:#ff66cc;">🧠 Creator Licensing Pool</h3>
+    <p>Your music, art, and content gets tracked and paid when used globally. IP protection + royalties.</p>
+
+    <h3 style="color:#ccff33;">🌍 Resource Equity Engine</h3>
+    <p>States that produce value earn shares. Residents get rewarded based on contribution scale.</p>
+
+    <h2 style="color:#ffcc00;">JUSTICE & LAW ENFORCEMENT SYSTEM</h2>
+    <h3>⚖️ Equal Justice Module</h3>
+    <ul>
+      <li>Tracks police misconduct and evidence tampering</li>
+      <li>Scans dashcam and bystander videos for truth</li>
+    </ul>
+
+    <h3>🏛 AI-Assisted Court Review</h3>
+    <ul>
+      <li>Cross-checks evidence, timelines, testimonies</li>
+      <li>Flags bias, illegal behavior, or false charges</li>
+    </ul>
+
+    <h3>⚖️ Fair Sentencing AI</h3>
+    <ul>
+      <li>No bias from race, wealth, or mood</li>
+      <li>Equal time for equal crimes based on facts</li>
+    </ul>
+
+    <h3>🕵️‍♀️ Oversight on DEA, ATF, FBI</h3>
+    <ul>
+      <li>Monitors misconduct and conspiracy cases</li>
+      <li>Whistleblowers protected and verified by AI</li>
+    </ul>
+
+    <p style="margin-top: 30px; color: #00ff00; font-weight: bold;">
+      ✅ First ever of its kind in the world — invented by a Black man. Remember where you heard it first.
+    </p>
+  </section>
+
 </body>
 </html>
